@@ -1,0 +1,22 @@
+{
+  "name": "ghost",
+  "version": "4.47.4",
+  "description": "Deploy Ghost v4 on Railway",
+  "main": "index.js",
+  "author": "codersalman",
+  "license": "MIT",
+  "engines": {
+    "node": "16.X"
+  },
+  "dependencies": {
+    "casper": "github:TryGhost/Casper#main",
+    "ghost": "4.47.4",
+    "ghost-storage-cloudinary": "2.2.1",
+
+    "sqlite3": "5.0.11"
+  },
+  "scripts": {
+    "start": "bin/create-config && node index.js",
+    "postinstall": "bin/cloudinary.sh && bash bin/themes.sh"
+  }
+}
